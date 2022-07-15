@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Drawing App</title>
+</head>
+
+<body>
+  <canvas id="canvas"></canvas>
+  <!-- <canvas id="canvas"width="800" height="700" ></canvas> -->
+  <div class="toolbox">
+    <button id="decrease">-</button>
+    <span id="size">10</span>
+    <button id="increase">+</button>
+    <input type="color" id="color">
+    <img id="Erase" src="/Images/write.png" height="30" width="30">
+    <button id="clear">X</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    const Erase = document.getElementById('Erase');
+    Erase.addEventListener('click', function handleClick() {
+      if (Erase.getAttribute('src') == "/Images/write.png") {
+        Erase.setAttribute('src', "/Images/eraser.png");
+      }
+      else {
+        Erase.setAttribute('src', "/Images/write.png");
+      }
+    }
+    );
+  </script>
+</body>
+
+</html>
